@@ -6,10 +6,10 @@
 // 12 >> C
 // 10 >> A
 // 128 >> 80
-// 918 >> 3D5
+// 918 >> 396
 // 1028 >> 404
 // 4893 >> 131D
-// 19284 >> 4D54
+// 19284 >> 4B54
 // 183748 >> 2CDC4
 
 import java.util.Scanner;
@@ -33,16 +33,13 @@ public class Hexadecimal {
         while (userInput > 0) {
             int remainder = userInput % DIVISOR;
 
-            String remainderToHexadecimal = "";
-
             if (remainder <= 9) {
-                remainderToHexadecimal += remainder;
+                hexadecimalNumberReversed += remainder;
             }
             if (remainder >= 10) {
-                remainderToHexadecimal += HEXADECIMAL_NUMBER_CHARACTER[remainder - 10];
+                hexadecimalNumberReversed += HEXADECIMAL_NUMBER_CHARACTER[remainder - 10];
             }
 
-            hexadecimalNumberReversed += remainderToHexadecimal;
             userInput /= DIVISOR;
         }
 
